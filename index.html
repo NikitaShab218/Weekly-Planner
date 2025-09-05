@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weekly Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main_logo">Weekly Planner</h1>
+
+    <div class="schoolSubjectAndTasks">
+      <h2 class="schoolSubject">School Subject</h2>
+      <h2 class="tasks">Tasks</h2>
+    </div>
+
+    <div class="Monday">
+      <div class="div_h1"><h1>Monday</h1></div>
+
+      <div class="subjects-wrapper">
+        <div class="schoolSubjectDiv">
+          <div class="lines">
+            <input class="line" type="text" value="1. Математика" />
+            <input class="line" type="text" value="2. Физика" />
+            <input class="line" type="text" value="3. Английский" />
+            <input class="line" type="text" value="4. История" />
+            <input class="line" type="text" value="5. История" />
+            <input class="line" type="text" value="6. История" />
+            <input class="line" type="text" value="7. Может хватит истории???" />
+          </div>
+        </div>
+
+
+        
+
+        <div class="tasksSubjectDiv">
+          <div class="lines">
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Сделать дз по алгебре" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Повторить историю" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Повторить правила по английскому" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="История" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="История" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="История" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="История" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="div_for_save_button">
+      <button onclick="saveData()" class="save_button">Сохранить изменения</button>
+      <button onclick="resetData()" class="save_button">Сбросить изменения</button>
+    </div>
+
+    <!--
+    <div class="info_task">
+      <div class="info_task_wrapper">
+        <div class="icon_and_text">
+          <img src="assets/state_task_no-complited.png" alt="default" />
+          No complited
+        </div>
+      </div>
+      <div class="info_task_wrapper">
+        <div class="icon_and_text">
+          <img src="assets/state_task_in-progress.png" alt="default" />
+          In progress
+        </div>
+      </div>
+      <div class="info_task_wrapper">
+        <div class="icon_and_text">
+          <img src="assets/state_task_complited.png" alt="default" />
+          Complited
+        </div>
+      </div>
+    </div>
+    -->
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
