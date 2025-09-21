@@ -1,38 +1,490 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weekly Planner</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   </head>
   <body>
-    <h1 class="main_logo">Weekly Planner</h1>
+    <h1 class="main_logo"onclick="toggleMenu()">Weekly Planner</h1>
+    <div id="dayMenu" class="day-menu hidden">
+      <button class="scroll" data-target="#Monday">Monday</button>
+      <button class="scroll" data-target="#Tuesday">Tuesday</button>
+      <button class="scroll" data-target="#Wednesday">Wednesday</button>
+      <button class="scroll" data-target="#Thursday">Thursday</button>
+      <button class="scroll" data-target="#Friday">Friday</button>
+      <button class="scroll" data-target="#Saturday">Saturday</button>
+      <button class="scroll" data-target="#Sunday">Sunday</button>
+    </div>
+
 
     <div class="schoolSubjectAndTasks">
       <h2 class="schoolSubject">School Subject</h2>
       <h2 class="tasks">Tasks</h2>
     </div>
 
-    <div class="Monday">
+    <div class="Monday" id="Monday">
       <div class="div_h1"><h1>Monday</h1></div>
+      <h2 class="schoolSubjectMobile">School Subject</h2>
 
       <div class="subjects-wrapper">
         <div class="schoolSubjectDiv">
           <div class="lines">
             <input class="line" type="text" value="1. Математика" />
             <input class="line" type="text" value="2. Физика" />
-            <input class="line" type="text" value="3. Английский" />
+            <input class="line" type="text" value="3. Английский язык" />
             <input class="line" type="text" value="4. История" />
-            <input class="line" type="text" value="5. История" />
-            <input class="line" type="text" value="6. История" />
-            <input class="line" type="text" value="7. Может хватит истории???" />
+            <input class="line" type="text" value="5. География" />
+            <input class="line" type="text" value="6. Химия" />
+            <input class="line" type="text" value="7. Информатика" />
           </div>
         </div>
 
 
         
+        <h2 class="tasksMobile">Tasks</h2>
+        <div class="tasksSubjectDiv">
+          <div class="lines">
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Повторить геометрию" />
+              </div>
+            </div>
 
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Доклад по физике" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Выучить новые слова" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Прочитать параграф по истории" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Подготовить карту по географии" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Решить задачи по химии" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Проект по информатике" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Tuesday" id="Tuesday">
+      <div class="div_h1"><h1>Tuesday</h1></div>
+      <h2 class="schoolSubjectMobile">School Subject</h2>
+
+      <div class="subjects-wrapper">
+        <div class="schoolSubjectDiv">
+          <div class="lines">
+            <input class="line" type="text" value="1. Математика" />
+            <input class="line" type="text" value="2. Физика" />
+            <input class="line" type="text" value="3. Английский язык" />
+            <input class="line" type="text" value="4. История" />
+            <input class="line" type="text" value="5. География" />
+            <input class="line" type="text" value="6. Химия" />
+            <input class="line" type="text" value="7. Информатика" />
+          </div>
+        </div>
+
+        <h2 class="tasksMobile">Tasks</h2>
+        <div class="tasksSubjectDiv">
+          <div class="lines">
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Тест по математике" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Лабораторная по физике" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Эссе по английскому" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Схема по истории" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Контурные карты" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Уравнения по химии" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Программа на JavaScript" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Wednesday" id="Wednesday">
+      <div class="div_h1"><h1>Wednesday</h1></div>
+      <h2 class="schoolSubjectMobile">School Subject</h2>
+
+      <div class="subjects-wrapper">
+        <div class="schoolSubjectDiv">
+          <div class="lines">
+            <input class="line" type="text" value="1. Математика" />
+            <input class="line" type="text" value="2. Физика" />
+            <input class="line" type="text" value="3. Английский язык" />
+            <input class="line" type="text" value="4. История" />
+            <input class="line" type="text" value="5. География" />
+            <input class="line" type="text" value="6. Химия" />
+            <input class="line" type="text" value="7. Информатика" />
+          </div>
+        </div>
+
+        <h2 class="tasksMobile">Tasks</h2>
+        <div class="tasksSubjectDiv">
+          <div class="lines">
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Повторить формулы" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Эксперимент по физике" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Аудирование по английскому" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Хронология событий" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Макет карты" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Таблица Менделеева" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Доделать проект" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Thursday" id="Thursday">
+      <div class="div_h1"><h1>Thursday</h1></div>
+      <h2 class="schoolSubjectMobile">School Subject</h2>
+
+      <div class="subjects-wrapper">
+        <div class="schoolSubjectDiv">
+          <div class="lines">
+            <input class="line" type="text" value="1. Математика" />
+            <input class="line" type="text" value="2. Физика" />
+            <input class="line" type="text" value="3. Английский язык" />
+            <input class="line" type="text" value="4. История" />
+            <input class="line" type="text" value="5. География" />
+            <input class="line" type="text" value="6. Химия" />
+            <input class="line" type="text" value="7. Информатика" />
+          </div>
+        </div>
+
+        <h2 class="tasksMobile">Tasks</h2>
+        <div class="tasksSubjectDiv">
+          <div class="lines">
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Контрольная по алгебре" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Задачи на движение" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Грамматика: Past Simple" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Подготовить ответы" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Презентация по странам" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Практикум по реакциям" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Разобрать массивы" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Friday" id="Friday">
+      <div class="div_h1"><h1>Friday</h1></div>
+      <h2 class="schoolSubjectMobile">School Subject</h2>
+
+      <div class="subjects-wrapper">
+        <div class="schoolSubjectDiv">
+          <div class="lines">
+            <input class="line" type="text" value="1. Математика" />
+            <input class="line" type="text" value="2. Физика" />
+            <input class="line" type="text" value="3. Английский язык" />
+            <input class="line" type="text" value="4. История" />
+            <input class="line" type="text" value="5. География" />
+            <input class="line" type="text" value="6. Химия" />
+            <input class="line" type="text" value="7. Информатика" />
+          </div>
+        </div>
+
+        <h2 class="tasksMobile">Tasks</h2>
+        <div class="tasksSubjectDiv">
+          <div class="lines">
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Домашнее чтение" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Научное видео" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Практика произношения" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Посещение музея" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Маршруты на карте" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Подготовить опыты" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Практика алгоритмов" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Saturday" id="Saturday">
+      <div class="div_h1"><h1>Saturday</h1></div>
+      <h2 class="schoolSubjectMobile">School Subject</h2>
+
+      <div class="subjects-wrapper">
+        <div class="schoolSubjectDiv">
+          <div class="lines">
+            <input class="line" type="text" value="1. Математика" />
+            <input class="line" type="text" value="2. Физика" />
+            <input class="line" type="text" value="3. Английский язык" />
+            <input class="line" type="text" value="4. История" />
+            <input class="line" type="text" value="5. География" />
+            <input class="line" type="text" value="6. Химия" />
+            <input class="line" type="text" value="7. Информатика" />
+          </div>
+        </div>
+
+        <h2 class="tasksMobile">Tasks</h2>
+        <div class="tasksSubjectDiv">
+          <div class="lines">
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Повторить темы недели" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Запланировать задачи" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Чтение на английском" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Документальный фильм" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Повторить столицы" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Повторить формулы" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="icon_and_text">
+                <img src="assets/state_task_default.png" alt="default" class="icon_task" />
+                <input type="text" class="task_input" value="Подготовить репозиторий" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Sunday" id="Sunday">
+      <div class="div_h1"><h1>Sunday</h1></div>
+      <h2 class="schoolSubjectMobile">School Subject</h2>
+
+      <div class="subjects-wrapper">
+        <div class="schoolSubjectDiv">
+          <div class="lines">
+            <input class="line" type="text" value="1. Математика" />
+            <input class="line" type="text" value="2. Физика" />
+            <input class="line" type="text" value="3. Английский язык" />
+            <input class="line" type="text" value="4. История" />
+            <input class="line" type="text" value="5. География" />
+            <input class="line" type="text" value="6. Химия" />
+            <input class="line" type="text" value="7. Информатика" />
+          </div>
+        </div>
+
+        <h2 class="tasksMobile">Tasks</h2>
         <div class="tasksSubjectDiv">
           <div class="lines">
             <div class="line">
@@ -93,6 +545,17 @@
       <button onclick="resetData()" class="save_button">Сбросить изменения</button>
     </div>
 
+
+
+
+   <div class="slider">
+    <div><img src="assets/m.jpeg" title="Понедельник" /></div>
+    <div><img src="assets/t.jpeg" title="Вторник" /></div>
+    <div><img src="assets/w.jpeg" title="Среда" /></div>
+    <div><img src="assets/th.jpeg" title="Четверг" /></div>
+    <div><img src="assets/f.jpeg" title="Пятница" /></div>
+  </div>
+
     <!--
     <div class="info_task">
       <div class="info_task_wrapper">
@@ -117,5 +580,6 @@
     -->
 
     <script src="script.js" defer></script>
+    <button class="to_top_button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
   </body>
 </html>
