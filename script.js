@@ -22,13 +22,26 @@
 //             </div>
 //         `;
 // });
+$(document).ready(function() {
+    $('.slider').bxSlider({
+        infiniteLoop: false,
+        hideControlOnEnd: true,
+        adaptiveHeight: true,
+    captions: true,
+    nextText: '',
+    prevText: '',
+    easing: 'jswing',
+    });
+});
+
+
 const subjectClass = "line";
 const taskClass = "task_input";
 const iconClass = "icon_task";
 
 window.onload = function () {
   const savedSubjects = JSON.parse(localStorage.getItem("subjects")) || [];
-  const subjectInputs = document.getElementsByClassName(subjectClass);
+  const subjectInputs = document.querySelectorAll('input.' + subjectClass);
   for (let i = 0; i < subjectInputs.length; i++) {
     if (savedSubjects[i] !== undefined) {
       subjectInputs[i].value = savedSubjects[i];
@@ -63,7 +76,7 @@ window.onload = function () {
 
 
 function saveData() {
-  const subjectInputs = document.getElementsByClassName(subjectClass);
+  const subjectInputs = document.querySelectorAll('input.' + subjectClass);
   const subjects = [];
   for (let input of subjectInputs) {
     subjects.push(input.value);
@@ -112,3 +125,20 @@ function resetData() {
   localStorage.clear();
   location.reload();
 }
+function toggleMenu() {
+  const menu = document.getElementById("dayMenu");
+  menu.classList.toggle("show");
+}
+
+
+let buttons = document.querySelectorAll(".scroll");
+
+buttons.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    let targetID = btn.dataset.target;
+    document.querySelector(targetID).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+});
